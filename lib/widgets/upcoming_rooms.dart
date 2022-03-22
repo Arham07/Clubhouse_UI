@@ -23,46 +23,46 @@ class UpcomingRooms extends StatelessWidget {
           children: upcomingRooms
               .map(
                 (e) => Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding:
-                            EdgeInsets.only(top: e.club.isNotEmpty ? 2.0 : 0),
-                        child: Text(e.time),
-                      ),
-                      const SizedBox(width: 12.0),
-                      Expanded(
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            if (e.club.isNotEmpty)
-                              Flexible(
-                                child: Text(
-                                  '${e.club} 🏠'.toUpperCase(),
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .overline!
-                                      .copyWith(
-                                        fontWeight: FontWeight.w600,
-                                        letterSpacing: 1.0,
-                                      ),
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                              ),
-                            Flexible(
-                              child:
-                                  Text(e.name, overflow: TextOverflow.ellipsis),
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding:
+                    EdgeInsets.only(top: e.club.isNotEmpty ? 2.0 : 0),
+                    child: Text(e.time),
                   ),
-                ),
-              )
+                  const SizedBox(width: 12.0),
+                  Expanded(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        if (e.club.isNotEmpty)
+                          Flexible(
+                            child: Text(
+                              '${e.club} 🏠'.toUpperCase(),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .overline!
+                                  .copyWith(
+                                fontWeight: FontWeight.w600,
+                                letterSpacing: 1.0,
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                        Flexible(
+                          child:
+                          Text(e.name, overflow: TextOverflow.ellipsis),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          )
               .toList(),
         ),
       ),

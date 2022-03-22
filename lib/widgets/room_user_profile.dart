@@ -25,31 +25,31 @@ class RoomUserProfile extends StatelessWidget {
         Stack(
           children: [
             Container(
-              padding: const EdgeInsets.all(6.0),
-              child: UserProfileImage(imageUrl: imageUrl, size: size),
+              padding: EdgeInsets.all(4.0),
+              child: UserProfileImage(
+                imageUrl: imageUrl,
+                size: size,
+              ),
             ),
             if (isNew)
               Positioned(
                 left: 0,
                 bottom: 0,
                 child: Container(
-                  padding: const EdgeInsets.all(4.0),
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
+                  padding: EdgeInsets.all(4.0),
+                  decoration: BoxDecoration(
                     shape: BoxShape.circle,
+                    color: Colors.white,
                     boxShadow: [
                       BoxShadow(
+                        blurRadius: 6.0,
                         color: Colors.black26,
                         offset: Offset(0, 2),
-                        blurRadius: 6.0,
                       ),
                     ],
                   ),
                   alignment: Alignment.center,
-                  child: const Text(
-                    '🎉',
-                    style: TextStyle(fontSize: 20.0),
-                  ),
+                  child: Text('🎉', style: TextStyle(fontSize: 17.0)),
                 ),
               ),
             if (isMuted)
@@ -57,31 +57,27 @@ class RoomUserProfile extends StatelessWidget {
                 right: 0,
                 bottom: 0,
                 child: Container(
-                  padding: const EdgeInsets.all(4.0),
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    shape: BoxShape.circle,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black26,
-                        offset: Offset(0, 2),
-                        blurRadius: 6.0,
-                      ),
-                    ],
-                  ),
-                  alignment: Alignment.center,
-                  child: const Icon(CupertinoIcons.mic_slash_fill),
-                ),
+                    padding: EdgeInsets.all(4.0),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          blurRadius: 6.0,
+                          color: Colors.black26,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
+                    ),
+                    alignment: Alignment.center,
+                    child: Icon(
+                      CupertinoIcons.mic_slash_fill,
+                      size: 20.0,
+                    )),
               ),
           ],
         ),
-        const SizedBox(height: 4.0),
-        Flexible(
-          child: Text(
-            name,
-            overflow: TextOverflow.ellipsis,
-          ),
-        ),
+        Flexible(child: Text(name, overflow: TextOverflow.ellipsis,),),
       ],
     );
   }

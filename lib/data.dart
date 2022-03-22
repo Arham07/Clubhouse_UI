@@ -11,11 +11,10 @@ class User {
 }
 
 const User currentUser = User(
-  givenName: 'Marcus',
-  familyName: 'Ng',
-  imageUrl:
-      'https://images.unsplash.com/photo-1578133671540-edad0b3d689e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80',
-);
+    givenName: 'Marcus',
+    familyName: 'Ng',
+    imageUrl:
+        'https://images.unsplash.com/photo-1515077678510-ce3bdf418862?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=675&q=80');
 
 const List<User> _allUsers = [
   User(
@@ -103,7 +102,7 @@ class Room {
   });
 }
 
-const List<Room> upcomingRoomsList = [
+final List<Room> upcomingRoomsList = [
   Room(
     club: 'Flutter',
     name: 'Flutter Engage Recap 🔴',
@@ -115,6 +114,10 @@ const List<Room> upcomingRoomsList = [
     time: '7:00 PM',
   ),
   Room(
+    club: '',
+    name: 'Clubhouse Turns 1',
+    time: '9:00 PM',
+  ),  Room(
     club: '',
     name: 'Clubhouse Turns 1',
     time: '9:00 PM',
@@ -137,6 +140,12 @@ final List<Room> roomsList = [
     others: List<User>.from(_allUsers)..shuffle(),
   ),
   Room(
+    club: 'NYU girls roasting tech guys',
+    name: 'love and bitcoin edition 💰',
+    speakers: (List<User>.from(_allUsers)..shuffle()).getRange(0, 4).toList(),
+    followedBySpeakers: List<User>.from(_allUsers)..shuffle(),
+    others: List<User>.from(_allUsers)..shuffle(),
+  ),  Room(
     club: 'NYU girls roasting tech guys',
     name: 'love and bitcoin edition 💰',
     speakers: (List<User>.from(_allUsers)..shuffle()).getRange(0, 4).toList(),

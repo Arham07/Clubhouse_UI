@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter_clubhouse_ui/data.dart';
-import 'package:flutter_clubhouse_ui/screens/room_screen.dart';
+import 'package:flutter_clubhouse_ui/screens/RoomScreen.dart';
 import 'package:flutter_clubhouse_ui/widgets/widgets.dart';
 
 class RoomCard extends StatelessWidget {
@@ -16,12 +15,8 @@ class RoomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.of(context).push(
-        MaterialPageRoute(
-          fullscreenDialog: true,
-          builder: (_) => RoomScreen(room: room),
-        ),
-      ),
+      onTap: () => Navigator.of(context)
+          .push(MaterialPageRoute(builder: (_) => RoomScreen(room: room))),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 4.0),
         child: Card(
@@ -34,35 +29,37 @@ class RoomCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '${room.club} 🏠'.toUpperCase(),
+                  '${room.club } 🏠'.toUpperCase(),
                   style: Theme.of(context).textTheme.overline!.copyWith(
-                        fontSize: 12.0,
-                        fontWeight: FontWeight.w500,
-                        letterSpacing: 1.0,
-                      ),
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 1.0,
+                      fontSize: 12.0),
+                  // overflow: TextOverflow.ellipsis,
                 ),
                 Text(
-                  room.name,
+                  '${room.name} 🏠'.toUpperCase(),
                   style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                        fontSize: 15.0,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 1.0,
+                      fontSize: 15.0),
                 ),
-                const SizedBox(height: 12.0),
+                SizedBox(
+                  height: 10.0,
+                ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(
                       child: Container(
-                        height: 100.0,
+                        height: 90.0,
                         child: Stack(
                           children: [
                             Positioned(
-                              left: 28.0,
                               top: 20.0,
+                              left: 28.0,
                               child: UserProfileImage(
                                 imageUrl: room.speakers[1].imageUrl,
-                                size: 48.0,
+                                size: 45.0,
                               ),
                             ),
                             UserProfileImage(
@@ -80,11 +77,11 @@ class RoomCard extends StatelessWidget {
                         children: [
                           ...room.speakers.map(
                             (e) => Text(
-                              '${e.givenName} ${e.familyName} 💬',
+                              '${e.givenName}  ${e.familyName} 💭',
                               style: Theme.of(context)
                                   .textTheme
-                                  .bodyText1!
-                                  .copyWith(fontSize: 16.0),
+                                  .bodyText1
+                                  ?.copyWith(fontSize: 16.0),
                             ),
                           ),
                           Padding(
