@@ -9,7 +9,7 @@ UI of Clubhouse. Developed using Flutter
 ## 🧑 Author
 
 #### Arham Javed
-[![LinkedIn Link](https://img.shields.io/badge/Connect-Hamza-blue.svg?logo=linkedin&longCache=true&style=social&label=Connect
+[![LinkedIn Link](https://img.shields.io/badge/Connect-Arham-blue.svg?logo=linkedin&longCache=true&style=social&label=Connect
 )](https://www.linkedin.com/in/arham-javed-9b4107216/)
 
 You can also follow my GitHub Profile to stay updated about my latest projects:
