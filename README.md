@@ -4,8 +4,7 @@ UI of Clubhouse. Developed using Flutter
 
 ## 📱 Screen Shots
 
-<img src="https://user-images.githubusercontent.com/101502781/159453860-04352f43-9aec-4510-ada1-33229a3e3fa7.jpeg" width=180>
-<img src="https://user-images.githubusercontent.com/101502781/159453853-429aadb1-ca4b-47df-af16-8764969587bd.jpeg" width=180> 
+<img src="https://user-images.githubusercontent.com/101502781/159453860-04352f43-9aec-4510-ada1-33229a3e3fa7.jpeg" width=180><img src="https://user-images.githubusercontent.com/101502781/159453853-429aadb1-ca4b-47df-af16-8764969587bd.jpeg" width=180> 
 
 ## 🧑 Author
 
